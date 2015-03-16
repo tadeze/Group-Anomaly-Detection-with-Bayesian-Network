@@ -1,0 +1,290 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.19)  16 MAR 2015 12:59
+entering extended mode
+**FinalReport.tex
+
+("E:\Classes\Winter 2015\PGM-CS536\GroupAnomal\GroupAnomaly\rereport\FinalRepor
+t.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("E:\Classes\Winter 2015\PGM-CS536\GroupAnomal\GroupAnomaly\rereport\aaai.sty"
+Conference Style for AAAI for LaTeX 2e -- version of 1 January 2015
+\titlebox=\skip43
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("E:\Classes\Winter 2015\PGM-CS536\GroupAnomal\GroupAnomaly\rereport\FinalRepor
+t.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 16.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen106
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 26.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 26.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 26.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+
+<synthetic.png, id=8, 240.14719pt x 109.1578pt>
+File: synthetic.png Graphic file (type png)
+ <use synthetic.png>
+Package pdftex.def Info: synthetic.png used on input line 53.
+(pdftex.def)             Requested size: 240.14658pt x 109.15753pt.
+
+Overfull \hbox (0.7522pt too wide) in paragraph at lines 53--54
+[][] 
+ []
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 59.
+
+<Topics.png, id=9, 481.8pt x 341.275pt>
+File: Topics.png Graphic file (type png)
+ <use Topics.png>
+Package pdftex.def Info: Topics.png used on input line 59.
+(pdftex.def)             Requested size: 415.54967pt x 248.42644pt.
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 66.
+
+<Groups.png, id=11, 803.0pt x 321.2pt>
+File: Groups.png Graphic file (type png)
+ <use Groups.png>
+Package pdftex.def Info: Groups.png used on input line 66.
+(pdftex.def)             Requested size: 512.15862pt x 182.68079pt.
+
+Overfull \hbox (6.26862pt too wide) in paragraph at lines 66--67
+ [] 
+ []
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 88.
+
+<T3_K6_Chi.pdf, id=13, 614.295pt x 794.97pt>
+File: T3_K6_Chi.pdf Graphic file (type pdf)
+ <use T3_K6_Chi.pdf>
+Package pdftex.def Info: T3_K6_Chi.pdf used on input line 88.
+(pdftex.def)             Requested size: 505.89pt x 150.26843pt.
+ [2 <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/synthet
+ic.png>]
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 100.
+
+<ResultGroupVsAUC.pdf, id=21, 614.295pt x 794.97pt>
+File: ResultGroupVsAUC.pdf Graphic file (type pdf)
+ <use ResultGroupVsAUC.pdf>
+Package pdftex.def Info: ResultGroupVsAUC.pdf used on input line 100.
+(pdftex.def)             Requested size: 227.64894pt x 123.30765pt.
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 107.
+
+<ResultTopicVsAuc.pdf, id=23, 614.295pt x 794.97pt>
+File: ResultTopicVsAuc.pdf Graphic file (type pdf)
+ <use ResultTopicVsAuc.pdf>
+Package pdftex.def Info: ResultTopicVsAuc.pdf used on input line 107.
+(pdftex.def)             Requested size: 227.64894pt x 123.30765pt.
+
+<grouptype.png, id=25, 240.14719pt x 154.32657pt>
+File: grouptype.png Graphic file (type png)
+ <use grouptype.png>
+Package pdftex.def Info: grouptype.png used on input line 121.
+(pdftex.def)             Requested size: 240.14658pt x 154.32617pt.
+
+Overfull \hbox (0.7522pt too wide) in paragraph at lines 121--122
+[][] 
+ []
+
+<topic.png, id=26, 240.14719pt x 150.5625pt>
+File: topic.png Graphic file (type png)
+ <use topic.png>
+Package pdftex.def Info: topic.png used on input line 123.
+(pdftex.def)             Requested size: 240.14658pt x 150.56212pt.
+
+Overfull \hbox (0.7522pt too wide) in paragraph at lines 123--124
+[][] 
+ []
+
+[3 <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/Topics.p
+ng> <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/ResultG
+roupVsAUC.pdf> <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rerep
+ort/ResultTopicVsAuc.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/Groups.
+png> <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/T3_K6_
+Chi.pdf>]
+<topicprop.png, id=63, 401.5pt x 301.125pt>
+File: topicprop.png Graphic file (type png)
+ <use topicprop.png>
+Package pdftex.def Info: topicprop.png used on input line 129.
+(pdftex.def)             Requested size: 240.90184pt x 180.67638pt.
+
+Overfull \hbox (1.50746pt too wide) in paragraph at lines 129--130
+[][] 
+ []
+
+[5 <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/grouptyp
+e.png> <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/topi
+c.png> <E:/Classes/Winter 2015/PGM-CS536/GroupAnomal/GroupAnomaly/rereport/topi
+cprop.png>]
+("E:\Classes\Winter 2015\PGM-CS536\GroupAnomal\GroupAnomaly\rereport\FinalRepor
+t.aux") ) 
+Here is how much of TeX's memory you used:
+ 1282 strings out of 493921
+ 17921 string characters out of 3144872
+ 73973 words of memory out of 3000000
+ 4590 multiletter control sequences out of 15000+200000
+ 16003 words of font info for 33 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,10n,19p,1235b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on FinalReport.pdf (5 pages, 356176 bytes).
+PDF statistics:
+ 88 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+
