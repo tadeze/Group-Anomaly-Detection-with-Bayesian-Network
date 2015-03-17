@@ -1,0 +1,21 @@
+function [div] = Div(self, in, type, options)
+
+if nargin < 4; 
+    options = []; 
+    if nargin < 3
+        type = 'kl';
+    end
+end
+
+[nsample alpha] = GetOptions(options, 'nsample', 1000, 'alpha', 0.5);
+
+switch lower(type)
+    case 'kl'
+        div = self.Div_KL(in, nsample);
+    case 'l2'
+        div = self.Div_L2(in);
+    case 'renyi'
+        div = self.Div_Renyi(in, alpha, nsample);
+    otherwise
+        error('unknown divergence type');
+end

@@ -1,0 +1,41 @@
+classdef MGM
+    %MGM multinomial genre model
+    
+    properties
+        pi % T x 1
+        chi % K x T
+        mus % dim x K
+        sigmas % dim x dim x K
+        gama % T x M
+        phi % N x K
+        
+        X
+        group_id
+    end
+    
+    methods
+        function [model] = MGM(pi, chi, mus, sigmas, gama, phi)
+            if nargin >= 4
+                model.pi = pi;
+                model.chi = chi;
+                model.mus = mus;
+                model.sigmas = sigmas;
+                if nargin == 6
+                    model.gama = gama;
+                    model.phi = phi;
+                end
+            end
+        end
+        function [t] = T(self)
+            t = size(self.chi, 2);
+        end
+        function [k] = K(self)
+            k = size(self.chi, 1);
+        end
+    end
+    
+    methods(Static)
+        [mgm, L] = Train(X, group_id, T, K, options);
+        [mgm, L] = Train1(X, group_id, T, K, options);
+    end
+end

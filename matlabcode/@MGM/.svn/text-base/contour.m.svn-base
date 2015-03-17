@@ -1,0 +1,14 @@
+function [gmms] = contour(self)
+
+pi = self.pi;
+chi = self.chi;
+mus = self.mus;
+sigmas = self.sigmas;
+[K,T] = size(chi);
+
+gmms = cell(1, T);
+for ind = 1:T
+    subplot(ceil(sqrt(T)),ceil(sqrt(T)),ind);
+    gmms{ind} = GMM(chi(:,ind), mus, sigmas);
+    contour(gmms{ind});title(sprintf('Weight = %g', pi(ind)));
+end

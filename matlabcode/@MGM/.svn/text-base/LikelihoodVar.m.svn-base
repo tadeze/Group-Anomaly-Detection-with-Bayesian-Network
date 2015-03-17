@@ -1,0 +1,13 @@
+function [L] = LikelihoodVar(self, lnpdf, group_id)
+% [L] = LikelihoodVar(lnpdf, group_id, params)
+% the variational likelihood of MGM.
+% lnpdf is the log-density of points under each topic. n x K
+
+phi = self.phi;
+gama = self.gama;
+logsafe = eps(0.0);
+
+l_point = sum(phi*log(self.chi + logsafe).*gama(:, group_id)', 2) + ...
+    sum(phi.*lnpdf, 2) - sum(phi.*log(phi + logsafe), 2);
+l_group = log(self.pi' + logsafe)*gama - sum(gama.*log(gama + logsafe), 1);
+L = l_group + accumarray(group_id, l_point)';

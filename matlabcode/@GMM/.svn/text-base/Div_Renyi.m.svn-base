@@ -1,0 +1,7 @@
+function [div] = Div_Renyi(self, in, alpha, nsample)
+
+data = self.GenData(nsample);
+l_f = self.Likelihood(data);
+l_g = in.Likelihood(data);
+div = logmeanexp((1 - alpha)*(l_g - l_f))./(alpha - 1);
+div = max(0, div);

@@ -1,0 +1,38 @@
+function [div] = Div_L2(self, in)
+
+w1 = self.weights/sum(self.weights);
+m1 = self.means;
+c1 = self.covars;
+w2 = in.weights/sum(in.weights);
+m2 = in.means;
+c2 = in.covars;
+
+m = length(w1); n = length(w2);
+
+div = 0;
+if m ~= n
+    for ind = 1:m;
+        for jnd = 1:m
+        div = div + w1(ind)*w1(jnd)*mvnpdf((m1(:,ind) - m1(:,jnd))', [], c1(:,:,ind)+c1(:,:,jnd));
+        end;
+    end
+    for ind = 1:n;
+        for jnd = 1:n
+        div = div + w2(ind)*w2(jnd)*mvnpdf((m2(:,ind) - m2(:,jnd))', [], c2(:,:,ind)+c2(:,:,jnd));
+        end;
+    end
+    for ind = 1:m;
+        for jnd = 1:n
+        div = div - 2*w1(ind)*w2(jnd)*mvnpdf((m1(:,ind) - m2(:,jnd))', [], c1(:,:,ind)+c2(:,:,jnd));
+        end;
+    end
+else
+    for ind = 1:m;
+        for jnd = 1:m
+        div = div + w1(ind)*w1(jnd)*mvnpdf((m1(:,ind) - m1(:,jnd))', [], c1(:,:,ind)+c1(:,:,jnd))...
+            + w2(ind)*w2(jnd)*mvnpdf((m2(:,ind) - m2(:,jnd))', [], c2(:,:,ind)+c2(:,:,jnd))...
+            - 2*w1(ind)*w2(jnd)*mvnpdf((m1(:,ind) - m2(:,jnd))', [], c1(:,:,ind)+c2(:,:,jnd));
+        end;
+    end
+end
+div = sqrt(max(0,div));

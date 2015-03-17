@@ -1,0 +1,29 @@
+function [mgm, L] = Train(X, group_id, T, K, options)
+% multinomial genre model
+
+if nargin < 5
+    options = [];
+end
+
+[n_try, para] = GetOptions(options, 'n_try', 5, 'para', false);
+
+[n, dim] = size(X);
+M = max(group_id);
+fprintf('MGM for %d x %d data. M = %d, T = %d, K = %d\n',...
+        n, dim, M, T, K);
+
+R = cell(1, n_try);
+L = zeros(1, n_try);
+if para
+    parfor tnd = 1:n_try
+        [R{tnd} L(tnd)] = MGM.Train1(X, group_id, T, K, options);
+    end
+else
+    for tnd = 1:n_try
+        [R{tnd} L(tnd)] = MGM.Train1(X, group_id, T, K, options);
+    end
+end
+
+ii = argmax(L);
+L = L(ii);
+mgm = R{ii};

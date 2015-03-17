@@ -1,0 +1,19 @@
+function [L] = Likelihood(self, X, lnpdf, group_id)
+% [L] = Likelihood(X, lnpdf, group_id, params)
+% the true likelihood of X under this model
+
+chi = self.chi;
+[K, T] = size(chi);
+M = double(max(group_id));
+
+if isempty(lnpdf)
+    lnpdf = GMM([], self.mus, self.sigmas).GetProb(X, true);
+end
+
+gchiN = zeros(M, T);
+for t = 1:T
+    gchiN(:,t) = accumarray(group_id, ...
+        logmulexp(lnpdf, log(chi(:,t))), [M, 1]);
+end
+
+L = logmulexp(gchiN, log(self.pi + eps(0.0)));

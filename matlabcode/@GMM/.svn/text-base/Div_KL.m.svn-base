@@ -1,0 +1,12 @@
+function [div] = Div_KL(self, in, nsample)
+
+if size(self) == 1 && size(in) == 1
+    dm = self.means - in.means;
+    div = logdet(in.covars) - logdet(self.covars) ...
+        + trace(in.covars\self.covars) - size(self.means,1)...
+        + dm'*(in.covars\dm);
+    div = 0.5*div;
+else
+    data = self.GenData(nsample);
+    div = max(0, mean(self.Likelihood(data) - in.Likelihood(data)));
+end

@@ -1,0 +1,85 @@
+T = 2;
+K = 3;
+M = 50;
+mean_N = 100;
+
+chi_gt = [1 2 0; 1 0 2] + 1e-1; %
+bads = [0 0 0; 0 1 1; 0 0 1] + 1e-1;
+
+nbad = [1 1 1];
+chi_gt = Normalize(chi_gt, 's1', 2);
+bads = Normalize(bads, 's1', 2);
+
+pi_gt = ones(1, T)/T;
+mus_gt = [-sqrt(3) -1; sqrt(3) -1; 0 2]';
+sigmas_gt = repmat(eye(2)*2e-1, [1, 1, 3]);
+
+% simulate data
+y_gt = randm(pi_gt, M);
+theta_gt = chi_gt(y_gt, :);
+N = poissrnd(mean_N*ones(1, M));
+cN = [0 cumsum(N)];
+z_gt = zeros(cN(end), 1);
+X = zeros(cN(end), size(mus_gt, 1));
+group_id = int32(zeros(cN(end), 1));
+group_type = zeros(M, 1);
+for m = 1:M
+    gmm = GMM(theta_gt(m, :), mus_gt, sigmas_gt);
+    [X((cN(m)+1):cN(m+1), :) z_gt((cN(m)+1):cN(m+1))] = gmm.GenData(N(m));
+    group_id((cN(m)+1):cN(m+1)) = m;
+end
+
+% anomalies
+for ind = 1:nbad(1)
+    m=1;
+    group_type(m) = 1;
+    idx = group_id == m;
+    X(idx, :) = randn(sum(idx), 2)*1;
+    z_gt(idx) = 0;
+end
+for ind = 1:nbad(2)
+    m=2;
+    group_type(m) = 2;
+    idx = group_id == m;
+    gmm.weights = bads(2, :);
+    [X(idx, :) z_gt(idx)] = gmm.GenData(sum(idx));
+end
+for ind = 1:nbad(3)
+    m=3;
+    group_type(m) = 3;
+    idx = group_id == m;
+    gmm.weights = bads(3, :);    
+    [X(idx, :) z_gt(idx)] = gmm.GenData(sum(idx));
+end
+group_sizes = accumarray(group_id, 1, [max(group_id),1]);
+
+ncol = 6;
+base = [mod((1:M) - 1, ncol)*7; floor(((1:M) - 1)/ncol)*7];
+colors = {'k', 'g', 'r', 'm'};
+rects = repmat([3, -2, -2.5, 2.5]'*1.1, 1, M);
+rects(1:2, :) = bsxfun(@plus, rects(1:2, :), base(2, :));
+rects(3:4, :) = bsxfun(@plus, rects(3:4, :), base(1, :));
+xl = [min(rects(3,:)) - 1, max(rects(4,:)) + 1];
+yl = [min(rects(2,:)) - 1, 11];
+
+options = struct('n_try', 3, 'para', false, 'verbose', true, ...
+    'epsilon', 1e-5, 'max_iter', 50, 'ridge', 1e-2);
+
+T = 2;
+K = 3;
+
+%% MGM
+
+mgm = MGM.Train(X, group_id, T, K, options);
+ts_mgm = -mgm.ScoreVar(X, group_id);
+fs_mgm = -mgm.Likelihood(X, [], group_id)./group_sizes;
+scores_mgm = ProcScore(ts_mgm);
+
+figure;
+scatter(X(:, 1) + base(1, group_id)', X(:, 2) + base(2, group_id)', [], scores_mgm(group_id), 'marker', '.');
+DrawRect(rects, 2, colors(group_type + 1));
+title('MGM');xlim(xl);ylim(yl);axis off;colormap pink;caxis([0, 1.3]);
+MaxFigure(gcf, [800,250]);
+
+figure;
+contour(mgm);
