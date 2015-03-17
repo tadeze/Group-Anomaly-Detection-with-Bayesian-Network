@@ -1,0 +1,32 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Blei, Ng, and Jordan}{2003}]{blei2003latent}
+Blei, D.~M.; Ng, A.~Y.; and Jordan, M.~I.
+\newblock 2003.
+\newblock Latent dirichlet allocation.
+\newblock {\em the Journal of machine Learning research} 3:993--1022.
+
+\bibitem[\protect\citeauthoryear{Chandola, Banerjee, and
+  Kumar}{2009}]{chandola2009anomaly}
+Chandola, V.; Banerjee, A.; and Kumar, V.
+\newblock 2009.
+\newblock Anomaly detection: A survey.
+\newblock {\em ACM Computing Surveys (CSUR)} 41(3):15.
+
+\bibitem[\protect\citeauthoryear{Xiong \bgroup et al\mbox.\egroup
+  }{2011}]{xiong2011hierarchical}
+Xiong, L.; P{\'o}czos, B.; Schneider, J.~G.; Connolly, A.; and VanderPlas, J.
+\newblock 2011.
+\newblock Hierarchical probabilistic models for group anomaly detection.
+\newblock In {\em International Conference on Artificial Intelligence and
+  Statistics},  789--797.
+
+\bibitem[\protect\citeauthoryear{Xiong, P{\'o}czos, and
+  Schneider}{2011}]{xiong2011group}
+Xiong, L.; P{\'o}czos, B.; and Schneider, J.~G.
+\newblock 2011.
+\newblock Group anomaly detection using flexible genre models.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  1071--1079.
+
+\end{thebibliography}
